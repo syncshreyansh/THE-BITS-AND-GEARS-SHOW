@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The BITS AND GEARS Show - 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0d1117; /* Dark background */
+        color: #d1d5db; /* Light gray text */
+        position: relative;
+        overflow-x: hidden;
+      }
+      /* --- Liquid Glass Background Blobs --- */
+      .background-blob-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.5;
+      }
+      .blob-1 {
+        width: 400px;
+        height: 400px;
+        background: rgba(139, 92, 246, 0.4); /* Purple */
+        top: -150px;
+        left: -150px;
+        animation: move-blob-1 15s infinite alternate;
+      }
+      .blob-2 {
+        width: 500px;
+        height: 500px;
+        background: rgba(59, 130, 246, 0.4); /* Blue */
+        bottom: -200px;
+        right: -200px;
+        animation: move-blob-2 20s infinite alternate;
+      }
+      @keyframes move-blob-1 {
+        from {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        to {
+          transform: translate(200px, 300px) rotate(360deg);
+        }
+      }
+      @keyframes move-blob-2 {
+        from {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        to {
+          transform: translate(-300px, -200px) rotate(-360deg);
+        }
+      }
+      /* --- End Liquid Glass Background --- */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #ffee58;
+      }
+      .tab-btn.active {
+        background-color: #501f80;
+        color: #ffffff;
+        font-weight: 600;
+      }
+      .tab-btn {
+        transition: all 0.3s ease;
+      }
+      .glass-card {
+        background-color: rgba(151, 47, 174, 0.053); /* Dark semi-transparent */
+        /* border: 1px solid rgba(255, 255, 255, 0.1); */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .glass-card:hover {
+        transform: translateY(-5px);
+      }
+      .icon-placeholder {
+        font-size: 2.5rem;
+        line-height: 1;
+      }
+      .font {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+      }
+      .animated-gradient-text {
+        background: linear-gradient(90deg, #ffffff, #501f80, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-flow-right 4s linear infinite;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.203),
+          0 0 20px rgba(255, 255, 255, 0.148); /* White glow */
+      }
+
+      .round-animation{
+         background: linear-gradient(90deg, #ffffff, #501f80, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-flow-right 4s linear infinite;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.203),
+          0 0 20px rgba(255, 255, 255, 0.148); /* White glow */
+          
+      }
+      .round-animation:hover{
+       font-size: 19px;
+      }
+      @keyframes gradient-flow-right {
+        0% {
+          background-position: 200% center;
+        }
+        100% {
+          background-position: 0% center;
+        }
+      }
+      .logooo {
+        max-width: 29%;
+        height: auto;
+      }
+      .mont {
+        font-family: "Montserrat", sans-serif;
+      }
+      .glow {
+        text-shadow: 0 0 9px rgba(255, 255, 255, 0.203),
+          0 0 20px rgba(255, 255, 255, 0.148);
+      }
+      .btnn:hover{
+        background-color: white;
+        color: purple;
+        transition:all 0.3s ease-in-out;
+      }
+      .round:hover{
+ text-shadow: 0 0 9px rgba(255, 255, 255, 0.203),
+          0 0 20px rgba(255, 255, 255, 0.148);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="background-blob-container">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <header
+      class="backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-lg"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <a href="#" class="text-xl font-bold text-gray-100"
+              ><img class="logooo" src="logoo.png" alt=""
+            /></a>
+          </div>
+          <nav class="hidden md:flex md:space-x-8 mont">
+            <a href="#about" class="nav-link text-gray-300">About</a>
+            <a href="#rounds" class="nav-link text-gray-300">Rounds</a>
+            <a href="#awards" class="nav-link text-gray-300">Awards</a>
+            <a href="#register" class="nav-link text-gray-300">Register</a>
+            <a href="#contact" class="nav-link text-gray-300">Contact</a>
+          </nav>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-300 hover:text-white focus:outline-none"
+            >
+              <span class="icon-placeholder">☰</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-gray-900 mont">
+        <a
+          href="#about"
+          class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800"
+          >About</a
+        >
+        <a
+          href="#rounds"
+          class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800"
+          >Rounds</a
+        >
+        <a
+          href="#awards"
+          class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800"
+          >Awards</a
+        >
+        <a
+          href="#register"
+          class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800"
+          >Register</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <section id="hero" class="py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold animated-gradient-text leading-tight"
+          >
+            The BITS AND GEARS <br class="md:hidden" />Show 2025
+          </h1>
+          <p
+            class="mt-4 text-lg md:text-xl text-white-400 max-w-3xl mx-auto mont"
+          >
+            A Premier Inter-House Technology Quiz Competition
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4 mont">
+            <div
+              class="bg-purple-900/50 text-purple-300 text-sm font-semibold px-4 py-2 rounded-full"
+            >
+              Second Week of October, 2025
+            </div>
+            <div
+              class="bg-yellow-900/50 text-yellow-300 text-sm font-semibold px-4 py-2 rounded-full"
+            >
+              School Auditorium
+            </div>
+            <div
+              class="bg-purple-900/50 text-purple-300 text-sm font-semibold px-4 py-2 rounded-full"
+            >
+              For Classes IX - XII
+            </div>
+          </div>
+          <a
+            href="#register"
+            class="mt-10 inline-block bg-purple-600 text-white font-weigh-200 py-3 px-8 rounded-lg text-lg btnn mont"
+          >
+            How to Register?
+          </a>
+        </div>
+      </section>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="h-px bg-gray-700"></div>
+        </div>
+      <section id="about" class="py-20 mont">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white glow">
+              ABOUT THE CHALLENGE
+            </h2>
+            <p class="mt-2 text-lg text-gray-400 max-w-3xl mx-auto">
+              The Bits and Gears Tech Challenge 2025 is designed to promote
+              digital literacy, critical thinking, and collaborative
+              problem-solving among high school students in an exciting,
+              competitive format.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-lg text-center">
+              <div class="icon-placeholder text-blue-400">💡</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                KNOWLEDGE ACQUISITION
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Gain comprehensive tech knowledge across emerging technologies,
+                historical milestones, and current affairs.
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-lg text-center">
+              <div class="icon-placeholder text-green-400">🤝</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                ENCOURAGING TEAMWORK
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Foster collaboration by working in teams of two, contributing to
+                your house’s overall performance.
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-lg text-center">
+              <div class="icon-placeholder text-purple-400">🎮</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                ENGAGING LEARNING
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Experience a dynamic platform that makes learning about
+                technology exciting for everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rounds" class="py-20 mont">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white glow">
+              COMPETITION FORMAT & ROUNDS
+            </h2>
+            <p class="mt-2 text-lg text-gray-400 max-w-3xl mx-auto">
+              The event features four houses, each with two teams of two
+              participants, competing across four progressively challenging
+              rounds.
+            </p>
+          </div>
+
+          <div id="tabs-container" class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap justify-center border-b border-gray-700">
+              <button
+                data-tab="1"
+                class="tab-btn px-4 py-3 text-gray-300 font-medium border-b-2 border-transparent hover:border-yellow-500 hover:text-yellow-400 focus:outline-none active round round-animation"
+              >
+                Round 1: Tech IQ
+              </button>
+              <button
+                data-tab="2"
+                class=" round-animation tab-btn px-4 py-3 text-gray-300 font-medium border-b-2 border-transparent hover:border-yellow-500 hover:text-yellow-400 round focus:outline-none"
+              >
+                Round 2: Fact or Fiction
+              </button>
+              <button
+                data-tab="3"
+                class=" round-animation tab-btn px-4 py-3 text-gray-300 font-medium border-b-2 border-transparent hover:border-yellow-500 hover:text-yellow-400 focus:outline-none round"
+              >
+                Round 3: Buzzer Blitz
+              </button>
+              <button
+                data-tab="4"
+                class=" round-animation tab-btn px-4 py-3 text-gray-300 font-medium border-b-2 border-transparent hover:border-yellow-500 hover:text-yellow-400 focus:outline-none round"
+              >
+                Round 4: Bonus Lens
+              </button>
+            </div>
+            <div class="mt-8">
+              <div id="tab-content-1" class="tab-content">
+                <div class="glass-card p-8 rounded-lg">
+                  <h3 class="text-2xl font-bold text-yellow-400 glow">
+                    Round 1: Tech IQ
+                  </h3>
+                  <div class="mt-4 space-y-2 text-gray-300">
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Difficulty:</strong
+                      >
+                      Easy
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Format:</strong
+                      >
+                      Participants will receive a technology-related question
+                      with four multiple-choice options.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Focus:</strong
+                      >
+                      Core technology concepts, basic terminology, and general
+                      facts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-content-2" class="tab-content hidden">
+                <div class="glass-card p-8 rounded-lg">
+                  <h3 class="text-2xl font-bold text-yellow-400 glow">
+                    Round 2: Fact or Fiction
+                  </h3>
+                  <div class="mt-4 space-y-2 text-gray-300">
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Difficulty:</strong
+                      >
+                      Mild
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Format:</strong
+                      >
+                      The host will read a popular tech rumor or statement.
+                      Participants must determine if it's True or False.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Focus:</strong
+                      >
+                      Separating popular myth from reality, recent product
+                      leaks, and market trends.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-content-3" class="tab-content hidden">
+                <div class="glass-card p-8 rounded-lg">
+                  <h3 class="text-2xl font-bold text-yellow-400 glow">
+                    Round 3: The Buzzer Blitz
+                  </h3>
+                  <div class="mt-4 space-y-2 text-gray-300">
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Difficulty:</strong
+                      >
+                      Hard
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Format:</strong
+                      >
+                      The host will read an advanced question. The fastest
+                      participant to press their buzzer gets to answer.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Focus:</strong
+                      >
+                      In-depth knowledge, technical specifics, and quick recall
+                      under pressure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-content-4" class="tab-content hidden">
+                <div class="glass-card p-8 rounded-lg">
+                  <h3 class="text-2xl font-bold text-yellow-400 glow">
+                    Round 4: The Bonus Lens
+                  </h3>
+                  <div class="mt-4 space-y-2 text-gray-300">
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Difficulty:</strong
+                      >
+                      Variable (Bonus Points)
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Format:</strong
+                      >
+                      An image, video, or audio clip will be shown. Participants
+                      must answer a question related to the media.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-gray-100"
+                        >Focus:</strong
+                      >
+                      Recognizing key tech personalities, products, and events
+                      through multimedia.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hosts" class="py-20 mont">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-yellow-400 glow">
+              MEET THE HOSTS
+            </h2>
+            <p class="mt-2 text-lg text-gray-400">
+              The event will be hosted and managed by the founding team.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-8">
+            <div class="glass-card p-8 rounded-lg w-full max-w-sm text-center">
+              <h3 class="text-2xl font-bold text-white">Shreyansh Singh</h3>
+              <p class="mt-1 text-yellow-400 glow font-semibold">
+                Founder & Tech Strategist
+              </p>
+              <p class="mt-4 text-gray-300">
+                Responsible for event logistics, content development, and
+                strategic oversight.
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-lg w-full max-w-sm text-center">
+              <h3 class="text-2xl font-bold text-white">Harsh Mishra</h3>
+              <p class="mt-1 text-yellow-400 glow font-semibold">
+                Co-Founder & Presenter
+              </p>
+              <p class="mt-4 text-gray-300">
+                Responsible for hosting, presentation, and audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" class="py-20 mont">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white glow">
+              AWARDS & RECOGNITION
+            </h2>
+            <p class="mt-2 text-lg text-gray-400">
+              Recognizing achievement, participation, and house spirit.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="glass-card p-8 rounded-lg flex flex-col items-center text-center"
+            >
+              <div class="icon-placeholder text-yellow-400">🏆</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                HOUSE AWARDS
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Certificates for the House Captain & Moderator of the 1st, 2nd,
+                and 3rd place winning houses.
+              </p>
+            </div>
+            <div
+              class="glass-card p-8 rounded-lg flex flex-col items-center text-center"
+            >
+              <div class="icon-placeholder text-green-400">🏅</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                CERTIFICATES OF APPRECIATION
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Awarded to all participants of the winning team.
+              </p>
+            </div>
+            <div
+              class="glass-card p-8 rounded-lg flex flex-col items-center text-center md:col-span-2 lg:col-span-1"
+            >
+              <div class="icon-placeholder text-blue-400">📜</div>
+              <h3 class="mt-4 text-xl font-bold text-yellow-400 glow">
+                PARTICIPATION CERTIFICATES
+              </h3>
+              <p class="mt-2 text-gray-300">
+                Awarded to all 16 participants, recognizing their dedication and
+                effort.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section id="register" class="py-20 mont">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-yellow-400 glow">HOW TO REGISTER?</h2>
+            <p class="mt-2 text-lg text-gray-400">
+              Interested students from Classes IX to XII can register now.
+              Follow the steps below.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-8">
+            <div class="glass-card p-8 rounded-lg w-full max-w-sm text-center">
+              <h3 class="text-2xl font-bold text-white">Allen Sir</h3>
+              <p class="mt-1 text-yellow-400 glow font-semibold">
+                Teacher-in-Charge
+              </p>
+              <p class="mt-4 text-gray-300">
+                Submit the following details to Teacher-in-Charge:
+              </p>
+              <ul class="mt-4 list-decimal list-inside space-y-2 text-gray-300 text-left">
+                <li>Full Name</li>
+                <li>Class & Section</li>
+                <li>Roll Number</li>
+                <li>House Name</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="h-px bg-gray-700"></div>
+        </div>
+    <footer id="contact" class="text-white mt-10 mont">
+  <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl font-bold">GET IN TOUCH</h2>
+    <p class="mt-2 text-gray-400">
+      For any queries regarding registration, rules, or content, please
+      contact us.
+    </p>
+    <div class="mt-6 flex justify-center items-center flex-wrap gap-x-6 gap-y-4">
+      <div class="flex items-center justify-center flex-wrap gap-x-2">
+        <a href="tel:+917355690870" class="flex items-center gap-x-2 hover:underline text-purple-400">
+          <img src="wp-logo.png" alt="WhatsApp Icon" style="width: 24px" />
+          <span>+91 7355690870</span>
+        </a>
+        <span class="text-gray-500">/</span>
+        <a href="tel:+919140151925" class="hover:underline text-purple-400">
+          <span>+91 9140151925</span>
+        </a>
+      </div>
+
+      <a href="https://instagram.com/bitsandgears" target="_blank" rel="noopener noreferrer" class="flex items-center gap-x-2 hover:underline text-purple-400">
+        <img src="ig-logo.png" alt="Instagram Icon" style="width: 24px" />
+        <span>@bitsandgears</span>
+      </a>
+    </div>
+    <div class="mt-8 border-t border-gray-700 pt-6">
+      <p class="text-gray-500 text-sm">
+        &copy; 2025 Bits and Gears. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabsContainer = document.getElementById('tabs-container');
+        const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
+        const tabContents = tabsContainer.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const tabNumber = button.dataset.tab;
+
+            tabButtons.forEach(btn => {
+              btn.classList.remove('active');
+            });
+
+            button.classList.add('active');
+
+            tabContents.forEach(content => {
+              // --- FIX: Used backticks (`) for template literal string ---
+              if (content.id === `tab-content-${tabNumber}`) {
+                content.classList.remove('hidden');
+              } else {
+                content.classList.add('hidden');
+              }
+            });
+          });
+        });
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
